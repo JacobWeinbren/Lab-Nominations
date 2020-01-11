@@ -8,7 +8,7 @@ count = {
     'bailey': 0,
     'phillips': 0,
     'starmer': 0,
-    'thornbury': 0,
+    'thornberry': 0,
     'none': 0,
 }
 
@@ -32,7 +32,7 @@ function render() {
                     ['bailey', data[item]['Long-Bailey Vote'].trim().replace("", 0)],
                     ['phillips', data[item]['Phillips Vote'].trim().replace("", 0)],
                     ['starmer', data[item]['Starmer Vote'].trim().replace("", 0)],
-                    ['thornbury', data[item]['Thornbury Vote'].trim().replace("", 0)],
+                    ['thornberry', data[item]['Thornberry Vote'].trim().replace("", 0)],
                     ['other', data[item]['Other Vote'].trim().replace("", 0)]
                 ].sort((a, b) => {
                     return b[1] - a[1]
@@ -48,8 +48,8 @@ function render() {
                     count['nandy'] += 1
                     $('path[title="' + data[item]['Constituency Name'] + '"]').css('fill', '#A569BD')
                 }
-                if (current == 'Emily Thornbury') {
-                    count['thornbury'] += 1
+                if (current == 'Emily Thornberry') {
+                    count['thornberry'] += 1
                 }
                 if (current == 'Rebecca Long-Bailey') {
                     count['bailey'] += 1
@@ -122,7 +122,7 @@ function render() {
                             $($('.status')[1]).html('CLP Nominated <b style="color:#A569BD">Lisa Nandy</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#A569BD")
                         }
-                        if (current == "Emily Thornbury") {
+                        if (current == "Emily Thornberry") {
                             $($('.status')[1]).html('CLP Nominated <b style="color:#5DADE2">Emily Thornberry</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#5DADE2")
                         }
@@ -187,7 +187,7 @@ function render() {
                             if (mp == "Lisa Nandy") {
                                 $($('.status')[3]).html('MP Nominated <b style="color:#A569BD">Lisa Nandy</b>')
                             }
-                            if (mp == "Emily Thornbury") {
+                            if (mp == "Emily Thornberry") {
                                 $($('.status')[3]).html('MP Nominated <b style="color:5DADE2">Emily Thornberry</b>')
                             }
                             if (mp == "Rebecca Long-Bailey") {
@@ -225,7 +225,7 @@ function render() {
                             if (name == "nandy") {
                                 colour = '#A569BD'
                             }
-                            if (name == "thornbury") {
+                            if (name == "thornberry") {
                                 colour = "#5DADE2"
                             }
                             if (name == "bailey") {
