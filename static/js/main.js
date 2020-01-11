@@ -85,6 +85,7 @@ function render() {
         object = svgPanZoom('svg', {
             zoomScaleSensitivity: 0.1,
             maxZoom: 5,
+            minZoom: 0.9,
             fit: true
         });
 
