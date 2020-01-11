@@ -123,7 +123,7 @@ function render() {
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#A569BD")
                         }
                         if (current == "Emily Thornbury") {
-                            $($('.status')[1]).html('CLP Nominated <b style="color:#5DADE2">Emily Thornbury</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#5DADE2">Emily Thornberry</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#5DADE2")
                         }
                         if (current == "Rebecca Long-Bailey") {
@@ -188,7 +188,7 @@ function render() {
                                 $($('.status')[3]).html('MP Nominated <b style="color:#A569BD">Lisa Nandy</b>')
                             }
                             if (mp == "Emily Thornbury") {
-                                $($('.status')[3]).html('MP Nominated <b style="color:5DADE2">Emily Thornbury</b>')
+                                $($('.status')[3]).html('MP Nominated <b style="color:5DADE2">Emily Thornberry</b>')
                             }
                             if (mp == "Rebecca Long-Bailey") {
                                 $($('.status')[3]).html('MP Nominated <b style="color:#45B39D">Rebecca Long-Bailey</b>')
