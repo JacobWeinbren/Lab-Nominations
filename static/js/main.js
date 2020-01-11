@@ -100,13 +100,13 @@ function render() {
                     old = $(this).attr('old')
                     if (old && old.length > 0) {
                         if (old == "None") {
-                            $($('.status')[0]).html('Nominated <b style="color:#CD6155">Neither</b> in 2016')
+                            $($('.status')[0]).html('CLP Nominated <b style="color:#CD6155">Neither</b> in 2016')
                         }
                         if (old == "Jeremy Corbyn") {
-                            $($('.status')[0]).html('Nominated <b style="color:#52BE80">Jeremy Corbyn</b> in 2016')
+                            $($('.status')[0]).html('CLP Nominated <b style="color:#52BE80">Jeremy Corbyn</b> in 2016')
                         }
                         if (old == "Owen Smith") {
-                            $($('.status')[0]).html('Nominated  <b style="color:#CD55B9">Owen Smith</b> in 2016')
+                            $($('.status')[0]).html('CLP Nominated  <b style="color:#CD55B9">Owen Smith</b> in 2016')
                         }
                     } else {
                         $($('.status')[0]).html('Nominated Nobody in 2016')
@@ -260,7 +260,7 @@ function render() {
         $(document).mouseover(function(e) {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
-                $($('.status')[0]).html('Nominated Nobody in 2016')
+                $($('.status')[0]).html('CLP Nominated Nobody in 2016')
                 $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
@@ -274,7 +274,7 @@ function render() {
         $(document).click(function(e) {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
-                $($('.status')[0]).html('Nominated Nobody in 2016')
+                $($('.status')[0]).html('CLP Nominated Nobody in 2016')
                 $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
