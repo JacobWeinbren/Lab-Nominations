@@ -1,0 +1,131 @@
+#svg {
+    position: relative;
+    height: 80vh;
+    max-width: 800px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#loading {
+    font-family: Arial;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    font-size: 0.8rem;
+
+}
+
+#key {
+    font-family: Arial;
+    z-index: 1000;
+    position: absolute;
+    padding: 10px;
+    bottom: -2px;
+    right: -2px;
+    margin: 0;
+    backdrop-filter: blur(5px);
+}
+
+@-moz-document url-prefix() {
+    #key {
+        background-color: white;
+    }
+}
+
+#key li object,
+#key li p {
+    float: left;
+}
+
+#key li object {
+    width: 2vw;
+    min-width: 25px;
+    margin-right: 10px;
+}
+
+#key li {
+    display: flex;
+}
+
+#key li p {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+svg {
+    filter: drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2));
+}
+
+.less-bright {
+    fill-opacity: 0.4 !important;
+    filter: none;
+}
+
+#info {
+    z-index: 1000;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    font-family: Arial;
+    position: absolute;
+    width: 30%;
+    min-width: 200px;
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background: white;
+}
+
+#box {
+    display: flex;
+    height: 4vw;
+    min-height: 35px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    float: left;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+#title:before {
+    content: '';
+    display: inline-block;
+    width: 4.5vw;
+    min-width: 40px;
+}
+
+@media screen and (max-width: 600px) {
+
+    #loading,
+    #key li p,
+    #title,
+    .status {
+        font-size: 0.7rem !important;
+    }
+}
+
+#hex {
+    position: absolute;
+    float: left;
+    height: 4vw;
+    min-height: 35px;
+}
+
+.status {
+    font-size: 0.8rem;
+    left: 7vh;
+    margin: 10px 0;
+}
+
+.bar {
+    display: flex;
+    width: 100%;
+    height: 2vh;
+    background: lightgrey;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/svg.js"></script>
+    <script src="static/js/panzoom.js"></script>
+    <script src="static/js/tabletop.js"></script>
+    <script src="static/js/main.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div id='svg'>
+        <p id='loading'>Loading Data...</p>
+        <ul id='key'>
+            <li>
+                <object id="nandy" data="hex/nandy_hex.svg" type="image/svg+xml"></object>
+                <p>Nandy</p>
+            </li>
+            <li>
+                <object id="starmer" data="hex/starmer_hex.svg" type="image/svg+xml"></object>
+                <p>Starmer</p>
+            </li>
+            <li>
+                <object id="bailey" data="hex/bailey_hex.svg" type="image/svg+xml"></object>
+                <p>Long-Bailey</p>
+            </li>
+            <li>
+                <object id="thornbury" data="hex/thornbury_hex.svg" type="image/svg+xml"></object>
+                <p>Thornbury</p>
+            </li>
+            <li>
+                <object id="phillips" data="hex/phillips_hex.svg" type="image/svg+xml"></object>
+                <p>Phillips</p>
+            </li>
+            <li>
+                <object id="lewis" data="hex/lewis_hex.svg" type="image/svg+xml"></object>
+                <p>Lewis</p>
+            </li>
+            <li>
+                <object id="none" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>None</p>
+            </li>
+        </ul>
+        <div id='info'>
+            <div id='box'>
+                <object id='hex' data="hex.svg" type="image/svg+xml"></object>
+                <p id='title'>Constituency Name</p>
+            </div>
+            <p class='status'>Nominated <b>Nobody</b> in 2016</p>
+            <p class='status'>Hasn't Nominated Yet</p>
+            <p class='status'>Elected <b>Party</b> in Year</p>
+            <p class='status'>MP Can't Make Nomination</p>
+            <div class='bar'>
+            </div>
+        </div>
+    </div>
+</body>
