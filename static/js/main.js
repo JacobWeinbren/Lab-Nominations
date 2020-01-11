@@ -115,35 +115,35 @@ function render() {
                     current = $(this).attr('current')
                     if (current && current.length > 0) {
                         if (current == "None") {
-                            $($('.status')[1]).html('Nominated <b style="color:#CD6155">Nobody</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#CD6155">Nobody</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#CD6155")
                         }
                         if (current == "Lisa Nandy") {
-                            $($('.status')[1]).html('Nominated <b style="color:#A569BD">Lisa Nandy</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#A569BD">Lisa Nandy</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#A569BD")
                         }
                         if (current == "Emily Thornbury") {
-                            $($('.status')[1]).html('Nominated <b style="color:#5DADE2">Emily Thornbury</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#5DADE2">Emily Thornbury</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#5DADE2")
                         }
                         if (current == "Rebecca Long-Bailey") {
-                            $($('.status')[1]).html('Nominated <b style="color:#45B39D">Rebecca Long-Bailey</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#45B39D">Rebecca Long-Bailey</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#45B39D")
                         }
                         if (current == "Jess Phillips") {
-                            $($('.status')[1]).html('Nominated <b style="color:#F4D03F">Jess Phillips</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#F4D03F">Jess Phillips</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#F4D03F")
                         }
                         if (current == "Keir Starmer") {
-                            $($('.status')[1]).html('Nominated <b style="color:#EB984E">Keir Starmer</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#EB984E">Keir Starmer</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#EB984E")
                         }
                         if (current == "Clive Lewis") {
-                            $($('.status')[1]).html('Nominated <b style="color:#54C7C2">Clive Lewis</b> in 2020')
+                            $($('.status')[1]).html('CLP Nominated <b style="color:#54C7C2">Clive Lewis</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#54C7C2")
                         }
                     } else {
-                        $($('.status')[1]).html("Hasn't Nominated Yet")
+                        $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                         document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
                     }
 
@@ -261,7 +261,7 @@ function render() {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
                 $($('.status')[0]).html('Nominated Nobody in 2016')
-                $($('.status')[1]).html("Hasn't Nominated Yet")
+                $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
                 document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
@@ -275,7 +275,7 @@ function render() {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
                 $($('.status')[0]).html('Nominated Nobody in 2016')
-                $($('.status')[1]).html("Hasn't Nominated Yet")
+                $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
                 document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
