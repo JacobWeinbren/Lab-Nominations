@@ -17,6 +17,7 @@
 }
 
 #key {
+    border-radius: 5px;
     font-family: Arial;
     z-index: 1000;
     position: absolute;
