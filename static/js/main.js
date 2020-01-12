@@ -84,10 +84,6 @@ function render() {
 
         object = svgPanZoom('svg', {
             zoomEnabled: true,
-            maxZoom: 5,
-            minZoom: 0.9,
-            fit: true,
-            center: true,
         });
 
         $($('#svg').find('path')).each(function() {
@@ -292,10 +288,4 @@ function render() {
 //Loads Spreadsheet
 $(document).ready(function() {
     render();
-});
-
-$(window).on('resize', function() {
-    object.resize();
-    object.fit();
-    object.center();
 });
