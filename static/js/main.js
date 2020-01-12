@@ -20,11 +20,11 @@ function render() {
         callback: function(data, tabletop) {
             //Add in Meta Data
             for (item in data) {
-                $('path[title="' + data[item]['Constituency Name'] + '"]').attr('old', data[item]['2016 Nomination'])
-                $('path[title="' + data[item]['Constituency Name'] + '"]').attr('current', data[item]['2020 Nomination'])
-                $('path[title="' + data[item]['Constituency Name'] + '"]').attr('vote', data[item]['Seat Elected Party (2016/2019)'])
-                $('path[title="' + data[item]['Constituency Name'] + '"]').attr('region', data[item]['Region'])
-                $('path[title="' + data[item]['Constituency Name'] + '"]').attr('mp', data[item]['MP Nomination'])
+                $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('old', data[item]['2016 Nomination'])
+                $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('current', data[item]['2020 Nomination'])
+                $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('vote', data[item]['Seat Elected Party (2016/2019)'])
+                $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('region', data[item]['Region'])
+                $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('mp', data[item]['MP Nomination'])
 
                 results = [
                     ['nandy', data[item]['Nandy Vote'].trim().replace("", 0)],
@@ -42,26 +42,31 @@ function render() {
                 current = data[item]['2020 Nomination']
                 if (current == 'Clive Lewis') {
                     count['lewis'] += 1
-                    $('path[title="' + data[item]['Constituency Name'] + '"]').css('fill', '#54C7C2')
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#54C7C2')
                 }
                 if (current == 'Lisa Nandy') {
                     count['nandy'] += 1
-                    $('path[title="' + data[item]['Constituency Name'] + '"]').css('fill', '#A569BD')
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#A569BD')
                 }
                 if (current == 'Emily Thornberry') {
                     count['thornberry'] += 1
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#5DADE2')
                 }
                 if (current == 'Rebecca Long-Bailey') {
                     count['bailey'] += 1
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#45B39D')
                 }
                 if (current == 'Jess Phillips') {
                     count['phillips'] += 1
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#F4D03F')
                 }
                 if (current == 'Keir Starmer') {
                     count['starmer'] += 1
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#EB984E')
                 }
                 if (current == 'None') {
                     count['none'] += 1
+                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '54C7C2')
                 }
             }
 
@@ -77,16 +82,17 @@ function render() {
 
 
     //Loads SVG
-    image = SVG('svg');
-    $.get('map.svg', function(content) {
-        var $tmp = $('svg', content);
-        image.svg($tmp.html());
+    $('#map')[0].addEventListener('load', function() {
 
-        object = svgPanZoom('svg', {
+        object = svgPanZoom('object', {
             zoomEnabled: true,
         });
 
-        $($('#svg').find('path')).each(function() {
+        svg = document.querySelector('#map').getSVGDocument()
+
+        $('#SvgjsSvg1006', svg).css('filter', 'drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2))')
+
+        $('path', svg).each(function() {
             if ($(this).attr('id') && !hasNumber($(this).attr('id'))) {
 
                 $(this).addClass('constituency')
@@ -94,11 +100,14 @@ function render() {
                 $(this).on('click mouseover', function() {
                     $('#title').text($(this).attr('title'))
 
+                    $('path', document.querySelector('#map').getSVGDocument()).css('fill-opacity', 1)
+                    $(this).css('fill-opacity', 0.6)
+
                     //2016 Nom
                     old = $(this).attr('old')
                     if (old && old.length > 0) {
                         if (old == "None") {
-                            $($('.status')[0]).html('CLP Nominated <b style="color:#CD6155">Neither</b> in 2016')
+                            $($('.status')[0]).html('CLP Nominated <b style="color:#CD6155">Nobody</b> in 2016')
                         }
                         if (old == "Jeremy Corbyn") {
                             $($('.status')[0]).html('CLP Nominated <b style="color:#52BE80">Jeremy Corbyn</b> in 2016')
@@ -107,10 +116,11 @@ function render() {
                             $($('.status')[0]).html('CLP Nominated  <b style="color:#CD55B9">Owen Smith</b> in 2016')
                         }
                     } else {
-                        $($('.status')[0]).html('Nominated Nobody in 2016')
+                        $($('.status')[0]).html("CLP Didn't Nominate in 2016")
                     }
 
                     current = $(this).attr('current')
+
                     if (current && current.length > 0) {
                         if (current == "None") {
                             $($('.status')[1]).html('CLP Nominated <b style="color:#CD6155">Nobody</b> in 2020')
@@ -248,9 +258,6 @@ function render() {
                             $('.bar').append(entry)
                         }
                     }
-
-                    $('.less-bright').removeClass('less-bright')
-                    $(this).addClass('less-bright')
                 });
             }
         })
@@ -258,13 +265,13 @@ function render() {
         $(document).mouseover(function(e) {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
-                $($('.status')[0]).html('CLP Nominated Nobody in 2016')
+                $($('.status')[0]).html("CLP Didn't Nominate in 2016")
                 $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
                 document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
                 $('.bar').html('')
-                $('.less-bright').removeClass('less-bright')
+                $('path', document.querySelector('#map').getSVGDocument()).css('fill-opacity', 1)
             }
         });
 
@@ -272,17 +279,16 @@ function render() {
         $(document).click(function(e) {
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
-                $($('.status')[0]).html('CLP Nominated Nobody in 2016')
+                $($('.status')[0]).html("CLP Didn't Nominate in 2016")
                 $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                 $($('.status')[2]).html("Elected Party in Year")
                 $($('.status')[3]).html("MP Can't Make Nomination")
                 document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
                 $('.bar').html('')
-                $('.less-bright').removeClass('less-bright')
+                $('path', document.querySelector('#map').getSVGDocument()).css('fill-opacity', 1)
             }
         });
-
-    }, 'xml');
+    });
 }
 
 //Loads Spreadsheet

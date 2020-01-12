@@ -1,4 +1,6 @@
 <svg id="SvgjsSvg1006" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:ev="http://www.w3.org/2001/xml-events" style="overflow: hidden; ">
+    <style>
+    </style>
     <defs id="SvgjsDefs1007"></defs>
     <metadata xmlns="http://www.w3.org/2000/svg" id="metadata728">
         <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -10,11 +12,6 @@
     </metadata>
     <sodipodi:namedview xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:current-layer="g582" inkscape:window-maximized="0" inkscape:window-y="23" inkscape:window-x="0" inkscape:cy="490.89323" inkscape:cx="-10.250988" inkscape:zoom="5.2408607" showgrid="false" id="namedview726" inkscape:window-height="896" inkscape:window-width="1661" inkscape:pageshadow="2" inkscape:pageopacity="0" guidetolerance="10" gridtolerance="10" objecttolerance="10" borderopacity="1" inkscape:document-rotation="0" bordercolor="#666666" pagecolor="#ffffff"></sodipodi:namedview>
     <defs xmlns="http://www.w3.org/2000/svg" id="defs690">
-        <style id="style5">
-        g {
-            cursor: pointer;
-        }
-        </style>
     </defs>
     <g xmlns="http://www.w3.org/2000/svg" transform="matrix(1.1057431918163556,0,0,1.1057431918163556,99.64196455213215,-0.6383450966760051)" class="svg-pan-zoom_viewport" id="viewport-20200111020052234" style="transform: matrix(1.10574, 0, 0, 1.10574, 99.642, -0.638345);">
         <g id="g582" stroke-width=".55045" stroke="#d3d3d3" fill="#fff">
