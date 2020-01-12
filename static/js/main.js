@@ -89,7 +89,8 @@ function render() {
             fit: true,
             center: true,
             controlIconsEnabled: true,
-            mouseWheelZoomEnabled: false
+            mouseWheelZoomEnabled: false,
+            panEnabled: false
         });
 
         $('#svg-pan-zoom-controls').attr('transform', "translate(25 25) scale(0.75)")
