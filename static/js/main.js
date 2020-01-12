@@ -85,6 +85,7 @@ function render() {
     $('#map')[0].addEventListener('load', function() {
 
         object = svgPanZoom('#map', {
+            controlIconsEnabled: false,
             fit: 1,
             center: 1
         });
