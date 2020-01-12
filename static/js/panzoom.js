@@ -142,6 +142,7 @@
             }
         }, i.prototype.handleMouseWheel = function(t) {
             if (this.options.zoomEnabled && "none" === this.state) {
+                this.options.preventMouseEventsDefault && (t.preventDefault ? t.preventDefault() : t.returnValue = !1);
                 var e = t.deltaY || 1,
                     o = Date.now() - this.lastMouseWheelEventTime,
                     n = 3 + Math.max(0, 30 - o);
