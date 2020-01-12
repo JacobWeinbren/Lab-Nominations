@@ -82,6 +82,18 @@ function render() {
         var $tmp = $('svg', content);
         image.svg($tmp.html());
 
+        object = svgPanZoom('svg', {
+            zoomEnabled: true,
+            maxZoom: 5,
+            minZoom: 0.9,
+            fit: true,
+            center: true,
+            controlIconsEnabled: true,
+            mouseWheelZoomEnabled: false
+        });
+
+        $('#svg-pan-zoom-controls').attr('transform', "translate(25 25) scale(0.75)")
+
         $($('#svg').find('path')).each(function() {
             if ($(this).attr('id') && !hasNumber($(this).attr('id'))) {
 
@@ -284,4 +296,10 @@ function render() {
 //Loads Spreadsheet
 $(document).ready(function() {
     render();
+});
+
+$(window).on('resize', function() {
+    object.resize();
+    object.fit();
+    object.center();
 });
