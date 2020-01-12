@@ -85,12 +85,14 @@ function render() {
     $('#map')[0].addEventListener('load', function() {
 
         object = svgPanZoom('#map', {
-            zoomEnabled: true,
+            controlIconsEnabled: true,
             fit: 1,
             center: 1
         });
 
         svg = document.querySelector('#map').getSVGDocument()
+
+        $('#svg-pan-zoom-controls', svg).attr('transform', 'translate(5, 5) scale(0.75, 0.75)')
 
         $('#SvgjsSvg1006', svg).css('filter', 'drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2))')
 
