@@ -83,10 +83,12 @@ function render() {
         image.svg($tmp.html());
 
         object = svgPanZoom('svg', {
-            zoomScaleSensitivity: 0.1,
+            zoomEnabled: true,
             maxZoom: 5,
             minZoom: 0.9,
-            fit: true
+            fit: true,
+            center: true,
+            controlIconsEnabled: true
         });
 
         $($('#svg').find('path')).each(function() {
@@ -291,10 +293,4 @@ function render() {
 //Loads Spreadsheet
 $(document).ready(function() {
     render();
-});
-
-$(window).on('resize', function() {
-    object.resize();
-    object.fit();
-    object.center();
 });
