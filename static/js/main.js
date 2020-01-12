@@ -88,8 +88,6 @@ function render() {
             minZoom: 0.9,
             fit: true,
             center: true,
-            mouseWheelZoomEnabled: false,
-            panEnabled: false
         });
 
         $($('#svg').find('path')).each(function() {
