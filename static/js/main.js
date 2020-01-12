@@ -264,21 +264,9 @@ function render() {
             }
         })
 
-        $(document).mouseover(function(e) {
-            if (!$(e.target).is('path')) {
-                $('#title').text('Constituency Name')
-                $($('.status')[0]).html("CLP Didn't Nominate in 2016")
-                $($('.status')[1]).html("CLP Hasn't Nominated Yet")
-                $($('.status')[2]).html("Elected Party in Year")
-                $($('.status')[3]).html("MP Can't Make Nomination")
-                document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
-                $('.bar').html('')
-                $('path', document.querySelector('#map').getSVGDocument()).css('fill-opacity', 1)
-            }
-        });
-
         //Removes Values (Phone)
-        $(document).click(function(e) {
+        $(svg).on('click mouseover touchstart', function(e) {
+            console.log(e)
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
                 $($('.status')[0]).html("CLP Didn't Nominate in 2016")
