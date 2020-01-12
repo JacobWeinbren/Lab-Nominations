@@ -88,12 +88,9 @@ function render() {
             minZoom: 0.9,
             fit: true,
             center: true,
-            controlIconsEnabled: true,
             mouseWheelZoomEnabled: false,
             panEnabled: false
         });
-
-        $('#svg-pan-zoom-controls').attr('transform', "translate(25 25) scale(0.75)")
 
         $($('#svg').find('path')).each(function() {
             if ($(this).attr('id') && !hasNumber($(this).attr('id'))) {
