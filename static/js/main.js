@@ -86,7 +86,6 @@ function render() {
 
         object = svgPanZoom('#map', {
             zoomEnabled: true,
-            dblClickZoomEnabled: false,
             fit: 1,
             center: 1
         });
