@@ -82,15 +82,6 @@ function render() {
         var $tmp = $('svg', content);
         image.svg($tmp.html());
 
-        object = svgPanZoom('svg', {
-            zoomEnabled: true,
-            maxZoom: 5,
-            minZoom: 0.9,
-            fit: true,
-            center: true,
-            controlIconsEnabled: true
-        });
-
         $($('#svg').find('path')).each(function() {
             if ($(this).attr('id') && !hasNumber($(this).attr('id'))) {
 
