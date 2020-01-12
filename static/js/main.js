@@ -101,7 +101,6 @@ function render() {
                 $(this).addClass('constituency')
 
                 $(this).on('click mouseover', function() {
-                    console.log('test')
                     $('#title').text($(this).attr('title'))
 
                     $('path', document.querySelector('#map').getSVGDocument()).css('fill-opacity', 1)
