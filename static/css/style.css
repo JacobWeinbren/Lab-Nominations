@@ -6,13 +6,17 @@
     border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+html {
+    touch-action: none;
+}
+
 #loading {
     font-family: Arial;
     position: absolute;
     top: 5px;
     left: 5px;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #key {
@@ -40,7 +44,7 @@
 
 #key li object {
     width: 2vw;
-    min-width: 25px;
+    min-width: 30px;
     margin-right: 10px;
 }
 
@@ -49,10 +53,11 @@
 }
 
 #key li p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     float: left;
+    margin: 10px;
 }
 
 #info {
@@ -60,13 +65,14 @@
     box-shadow: 0 3px rgba(0, 0, 0, 0.2);
     font-family: Arial;
     position: absolute;
-    width: 30%;
+    width: 40%;
     min-width: 200px;
     display: inline-block;
     top: 10px;
     right: 10px;
     padding: 10px;
     background: white;
+    font-size: 1rem;
 }
 
 #box {
@@ -80,7 +86,6 @@
     align-items: center;
     float: left;
     font-weight: bold;
-    font-size: 0.8rem;
     width: 100%;
 }
 
@@ -93,11 +98,14 @@
 
 @media screen and (max-width: 600px) {
 
+    #svg {
+        height: 60vh;
+    }
+
     #loading,
     #key li p,
-    #title,
-    .status {
-        font-size: 0.7rem !important;
+    #info {
+        font-size: calc(13px + 0.1vw) !important;
     }
 }
 
@@ -109,7 +117,6 @@
 }
 
 .status {
-    font-size: 0.8rem;
     left: 7vh;
     margin: 10px 0;
 }
