@@ -298,3 +298,9 @@ function render() {
 $(document).ready(function() {
     render();
 });
+
+$(window).on('resize', function() {
+    object.resize();
+    object.fit();
+    object.center();
+});
