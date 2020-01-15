@@ -4,7 +4,6 @@ function hasNumber(string) {
 
 count = {
     'nandy': 0,
-    'lewis': 0,
     'bailey': 0,
     'phillips': 0,
     'starmer': 0,
@@ -28,7 +27,6 @@ function render() {
 
                 results = [
                     ['nandy', data[item]['Nandy Vote'].trim().replace("", 0)],
-                    ['lewis', data[item]['Lewis Vote'].trim().replace("", 0)],
                     ['bailey', data[item]['Long-Bailey Vote'].trim().replace("", 0)],
                     ['phillips', data[item]['Phillips Vote'].trim().replace("", 0)],
                     ['starmer', data[item]['Starmer Vote'].trim().replace("", 0)],
@@ -40,10 +38,6 @@ function render() {
                 $('path[title="' + data[item]['Constituency Name'] + '"]').data('results', results)
 
                 current = data[item]['2020 Nomination']
-                if (current == 'Clive Lewis') {
-                    count['lewis'] += 1
-                    $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#54C7C2')
-                }
                 if (current == 'Lisa Nandy') {
                     count['nandy'] += 1
                     $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#A569BD')
@@ -148,10 +142,6 @@ function render() {
                             $($('.status')[1]).html('CLP Nominated <b style="color:#EB984E">Keir Starmer</b> in 2020')
                             document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#EB984E")
                         }
-                        if (current == "Clive Lewis") {
-                            $($('.status')[1]).html('CLP Nominated <b style="color:#54C7C2">Clive Lewis</b> in 2020')
-                            document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#54C7C2")
-                        }
                     } else {
                         $($('.status')[1]).html("CLP Hasn't Nominated Yet")
                         document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "white")
@@ -246,9 +236,6 @@ function render() {
                             }
                             if (name == "starmer") {
                                 colour = "#EB984E"
-                            }
-                            if (name == "lewis") {
-                                colour = "#54C7C2"
                             }
                             if (name == "other") {
                                 colour = "grey"
