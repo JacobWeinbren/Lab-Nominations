@@ -130,6 +130,7 @@ table {
 
     #svg {
         height: 60vh;
+        touch-action: none;
     }
 
     #info {
