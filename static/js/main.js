@@ -2,6 +2,9 @@ function hasNumber(string) {
     return /\d/.test(string);
 }
 
+first = false;
+second = false;
+
 count = {
     'nandy': 0,
     'bailey': 0,
@@ -281,15 +284,22 @@ $(document).ready(function() {
 });
 
 $(window).on('resize', function() {
-    if ($('.first').is(":visible")) {
-        for (name in count) {
-            document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name]
+
+    if (!first) {
+        if ($('.first').is(":visible")) {
+            for (name in count) {
+                document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name]
+            }
+            first = true;
         }
     }
 
-    if ($('.second').is(":visible")) {
-        for (name in count) {
-            $('.' + name).html(count[name]);
+    if (!second) {
+        if ($('.second').is(":visible")) {
+            for (name in count) {
+                $('.' + name).html(count[name]);
+            }
+            second = true;
         }
     }
 
