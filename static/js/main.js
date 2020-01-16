@@ -102,7 +102,7 @@ function render(data) {
                 old = $(this).attr('old')
                 if (old && old.length > 0) {
                     if (old == "None") {
-                        $($('.status')[0]).html('CLP Nominated <b style="color:#CD6155">Nobody</b> in 2016');
+                        $($('.status')[0]).html('CLP Nominated <b style="color:#54C7C2">Nobody</b> in 2016');
                     }
                     if (old == "Jeremy Corbyn") {
                         $($('.status')[0]).html('CLP Nominated <b style="color:#52BE80">Jeremy Corbyn</b> in 2016');
@@ -182,7 +182,7 @@ function render(data) {
                 if (vote == "Lab") {
                     if (mp && mp.length > 0) {
                         if (mp == "None") {
-                            $($('.status')[3]).html('MP Nominated <b style="color:#CD6155">Nobody</b>');
+                            $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Nobody</b>');
                         }
                         if (mp == "Lisa Nandy") {
                             $($('.status')[3]).html('MP Nominated <b style="color:#A569BD">Lisa Nandy</b>');
@@ -203,7 +203,7 @@ function render(data) {
                             $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Clive Lewis</b>');
                         }
                     } else {
-                        $($('.status')[3]).html("MP Hasn't Nominated Yet");
+                        $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Nobody</b>');
                     }
                 } else {
                     $($('.status')[3]).html("MP Can't Make Nomination");
