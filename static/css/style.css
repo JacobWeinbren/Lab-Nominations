@@ -131,6 +131,7 @@ table {
     #svg {
         height: 60vh;
         touch-action: none;
+        pointer-events: none;
     }
 
     #info {
