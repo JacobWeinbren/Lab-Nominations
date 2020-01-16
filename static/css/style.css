@@ -92,10 +92,51 @@
     min-width: 40px;
 }
 
-@media screen and (max-width: 600px) {
+.second {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+
+    table-layout: fixed;
+    font-family: Arial;
+    background: white;
+    margin-top: 10px;
+    font-size: calc(15px + 0.1vw) !important;
+}
+
+.second {
+    display: none;
+}
+
+.second td,
+.second th {
+    height: 40px;
+    text-align: center;
+    width: 50%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+@media screen and (max-width: 650px) {
 
     #svg {
         height: 60vh;
+    }
+
+    #info {
+        display: none;
+    }
+
+    .first {
+        display: none;
+    }
+
+    .second {
+        display: table;
     }
 
     #loading,

@@ -253,7 +253,6 @@ function render() {
 
         //Removes Values (Phone)
         $(svg).on('click mouseover touchstart', function(e) {
-            console.log(e)
             if (!$(e.target).is('path')) {
                 $('#title').text('Constituency Name')
                 $($('.status')[0]).html("CLP Didn't Nominate in 2016")
