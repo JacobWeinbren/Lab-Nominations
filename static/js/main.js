@@ -16,8 +16,6 @@ count = {
 
 function render(data) {
 
-    svg = document.querySelector('#map').getSVGDocument();
-
     object = svgPanZoom('#map', {
         controlIconsEnabled: false,
         fit: 1,
@@ -67,7 +65,7 @@ function render(data) {
         }
         if (current == 'None') {
             count['none'] += 1
-            $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '54C7C2')
+            $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#CD6155')
         }
     }
 
@@ -85,8 +83,6 @@ function render(data) {
 
     $('#loading').remove();
 
-    $('#SvgjsSvg1006', svg).css('filter', 'drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2))');
-
     $('path', svg).each(function() {
         if ($(this).attr('id') && !hasNumber($(this).attr('id'))) {
 
@@ -102,7 +98,7 @@ function render(data) {
                 old = $(this).attr('old')
                 if (old && old.length > 0) {
                     if (old == "None") {
-                        $($('.status')[0]).html('CLP Nominated <b style="color:#54C7C2">Nobody</b> in 2016');
+                        $($('.status')[0]).html('CLP Nominated <b style="color:#CD6155">Nobody</b> in 2016');
                     }
                     if (old == "Jeremy Corbyn") {
                         $($('.status')[0]).html('CLP Nominated <b style="color:#52BE80">Jeremy Corbyn</b> in 2016');
@@ -182,7 +178,7 @@ function render(data) {
                 if (vote == "Lab") {
                     if (mp && mp.length > 0) {
                         if (mp == "None") {
-                            $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Nobody</b>');
+                            $($('.status')[3]).html('MP Nominated <b style="color:#CD6155">Nobody</b>');
                         }
                         if (mp == "Lisa Nandy") {
                             $($('.status')[3]).html('MP Nominated <b style="color:#A569BD">Lisa Nandy</b>');
@@ -203,7 +199,7 @@ function render(data) {
                             $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Clive Lewis</b>');
                         }
                     } else {
-                        $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Nobody</b>');
+                        $($('.status')[3]).html('MP Nominated <b style="color:#CD6155">Nobody</b>');
                     }
                 } else {
                     $($('.status')[3]).html("MP Can't Make Nomination");
@@ -273,6 +269,9 @@ function render(data) {
 //Loads Spreadsheet
 $(document).ready(function() {
     $('#map')[0].addEventListener('load', function() {
+        svg = document.querySelector('#map').getSVGDocument();
+        $('#SvgjsSvg1006', svg).css('filter', 'drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2))');
+
         Tabletop.init({
             key: 'https://docs.google.com/spreadsheets/d/1SKzDtlE7qcpZtueCl-CJlWkeUZnMctWrV7ufNnAlIJs/edit?usp=sharing',
             callback: function(data, tabletop) {
