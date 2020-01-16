@@ -120,6 +120,11 @@ tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+table {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
 
 @media screen and (max-width: 650px) {
 
