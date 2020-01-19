@@ -32,12 +32,14 @@ body {
     bottom: -2px;
     left: 2px;
     margin: 0;
-    backdrop-filter: blur(5px);
+    background-color: white;
 }
 
-@-moz-document url-prefix() {
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
     #key {
-        background-color: white;
+        background-color: transparent !important;
+        backdrop-filter: blur(5px) !important;
     }
 }
 
