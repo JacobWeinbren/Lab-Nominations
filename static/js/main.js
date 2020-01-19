@@ -16,12 +16,6 @@ count = {
 
 function render(data) {
 
-    object = svgPanZoom('#map', {
-        controlIconsEnabled: false,
-        fit: 1,
-        center: 1
-    });
-
     //Add in Meta Data
     for (item in data) {
         $('path[title="' + data[item]['Constituency Name'] + '"]', svg).attr('old', data[item]['2016 Nomination'])
@@ -271,6 +265,12 @@ $(document).ready(function() {
     $('#map')[0].addEventListener('load', function() {
         svg = document.querySelector('#map').getSVGDocument();
         $('#SvgjsSvg1006', svg).css('filter', 'drop-shadow(-3px 5px 2px rgba(0, 0, 0, .2))');
+
+        object = svgPanZoom('#map', {
+            controlIconsEnabled: false,
+            fit: 1,
+            center: 1
+        });
 
         Tabletop.init({
             key: 'https://docs.google.com/spreadsheets/d/1SKzDtlE7qcpZtueCl-CJlWkeUZnMctWrV7ufNnAlIJs/edit?usp=sharing',
