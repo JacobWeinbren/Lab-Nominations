@@ -8,7 +8,6 @@ second = false;
 count = {
     'nandy': 0,
     'bailey': 0,
-    'phillips': 0,
     'starmer': 0,
     'thornberry': 0,
     'none': 0
@@ -27,7 +26,6 @@ function render(data) {
         results = [
             ['nandy', data[item]['Nandy Vote'].trim().replace("", 0)],
             ['bailey', data[item]['Long-Bailey Vote'].trim().replace("", 0)],
-            ['phillips', data[item]['Phillips Vote'].trim().replace("", 0)],
             ['starmer', data[item]['Starmer Vote'].trim().replace("", 0)],
             ['thornberry', data[item]['Thornberry Vote'].trim().replace("", 0)],
             ['other', data[item]['Other Vote'].trim().replace("", 0)]
@@ -48,10 +46,6 @@ function render(data) {
         if (current == 'Rebecca Long-Bailey') {
             count['bailey'] += 1
             $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#45B39D')
-        }
-        if (current == 'Jess Phillips') {
-            count['phillips'] += 1
-            $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', '#F4D03F')
         }
         if (current == 'Keir Starmer') {
             count['starmer'] += 1
@@ -123,10 +117,6 @@ function render(data) {
                         $($('.status')[1]).html('CLP Nominated <b style="color:#45B39D">Rebecca Long-Bailey</b> in 2020');
                         document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#45B39D");
                     }
-                    if (current == "Jess Phillips") {
-                        $($('.status')[1]).html('CLP Nominated <b style="color:#F4D03F">Jess Phillips</b> in 2020');
-                        document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#F4D03F");
-                    }
                     if (current == "Keir Starmer") {
                         $($('.status')[1]).html('CLP Nominated <b style="color:#EB984E">Keir Starmer</b> in 2020');
                         document.querySelector('#hex').getSVGDocument().getElementById("info_hex").setAttribute("fill", "#EB984E");
@@ -183,14 +173,8 @@ function render(data) {
                         if (mp == "Rebecca Long-Bailey") {
                             $($('.status')[3]).html('MP Nominated <b style="color:#45B39D">Rebecca Long-Bailey</b>');
                         }
-                        if (mp == "Jess Phillips") {
-                            $($('.status')[3]).html('MP Nominated <b style="color:#F4D03F">Jess Phillips</b>');
-                        }
                         if (mp == "Keir Starmer") {
                             $($('.status')[3]).html('MP Nominated <b style="color:#EB984E">Keir Starmer</b>');
-                        }
-                        if (mp == "Clive Lewis") {
-                            $($('.status')[3]).html('MP Nominated <b style="color:#54C7C2">Clive Lewis</b>');
                         }
                     } else {
                         $($('.status')[3]).html('MP Nominated <b style="color:#CD6155">Nobody</b>');
@@ -221,9 +205,6 @@ function render(data) {
                         }
                         if (name == "bailey") {
                             colour = "#45B39D";
-                        }
-                        if (name == "phillips") {
-                            colour = "#F4D03F";
                         }
                         if (name == "starmer") {
                             colour = "#EB984E";
