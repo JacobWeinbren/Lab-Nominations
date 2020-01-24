@@ -591,7 +591,6 @@
             <path id="Charnwood" class="location constituency" d="m 374.96,421.95 m 7.6292,-4.4036 -7.6292,-4.4036 -7.6292,4.4036 v 8.8072 l 7.6292,4.4036 7.6292,-4.4036 z" active="true" data-regions="E14000625" party="" selected="false" title="Charnwood" inkscape:connector-curvature="0" />
             <path id="Northampton North" class="location constituency" d="m 374.96,448.37 m 7.6292,-4.4036 -7.6292,-4.4036 -7.6292,4.4036 v 8.8071 l 7.6292,4.4036 7.6292,-4.4036 z" active="true" data-regions="E14000861" party="" selected="false" title="Northampton North" inkscape:connector-curvature="0" />
             <path inkscape:connector-curvature="0" title="Ynys Môn" selected="false" party="" data-regions="W07000060" active="true" d="m 34.6338,422.4965 m 7.6292,-4.4036 -7.6292,-4.4036 -7.6292,4.4036 v 8.8072 l 7.6292,4.4036 7.6292,-4.4036 z" class="location constituency" id="Ynys Môn" style="stroke-width:1" />
-            <path inkscape:connector-curvature="0" title="" fill="#f9f4f4" selected="false" party="" data-regions="E14000925" active="true" d="m -36.260594,275.76334 m 7.6292,-4.4036 -7.6292,-4.4036 -7.6292,4.4036 v 8.8072 l 7.6292,4.4036 7.6292,-4.4036 z" class="location constituency" id="nothingatall" style="overflow:hidden;fill:none;stroke-width:0" />
         </g>
         <g fill="none" id="g619">
             <path id="path4848" d="m 252.93,219.39 7.6272,-4.4036 -0.004,-8.8071 7.6312,-4.4036 v -8.8071 l 7.6232,-4.4036" stroke="#d3d3d3" stroke-width=".55045" inkscape:connector-curvature="0" />
