@@ -19,28 +19,53 @@
                 <p id='title'>Constituency Name</p>
             </div>
             <p class='status'>CLP Didn't Nominate in 2016</p>
-            <p class='status'>CLP Hasn't Nominated Yet</p>
+            <p class='status'>CLP Hasn't Nominated Leader Yet</p>
+            <p class='status'>CLP Hasn't Nominated Deputy Yet</p>
+            <p class='status'>MP/MSP Can't Make Nomination</p>
             <p class='status'>Elected Party in Year</p>
-            <p class='status'>MP Can't Make Nomination</p>
             <div class='bar'>
+            </div>
+            <div id="greater">
+                <button class="control" id="leader">Leader View</button>
+                <button class="control" id="deputy">Deputy-Leader View</button>
             </div>
         </div>
         <ul id='key' class="first">
-            <li>
+            <li class="leader">
                 <object id="nandy" data="hex/nandy_hex.svg" type="image/svg+xml"></object>
                 <p>Nandy</p>
             </li>
-            <li>
+            <li class="leader">
                 <object id="starmer" data="hex/starmer_hex.svg" type="image/svg+xml"></object>
                 <p>Starmer</p>
             </li>
-            <li>
+            <li class="leader">
                 <object id="bailey" data="hex/bailey_hex.svg" type="image/svg+xml"></object>
                 <p>Long-Bailey</p>
             </li>
-            <li>
+            <li class="leader">
                 <object id="thornberry" data="hex/thornbury_hex.svg" type="image/svg+xml"></object>
                 <p>Thornberry</p>
+            </li>
+            <li class="deputy">
+                <object id="khan" data="hex/khan_hex.svg" type="image/svg+xml"></object>
+                <p>Allin-Khan</p>
+            </li>
+            <li class="deputy">
+                <object id="rayner" data="hex/rayner_hex.svg" type="image/svg+xml"></object>
+                <p>Rayner</p>
+            </li>
+            <li class="deputy">
+                <object id="burgon" data="hex/burgon_hex.svg" type="image/svg+xml"></object>
+                <p>Burgon</p>
+            </li>
+            <li class="deputy">
+                <object id="murray" data="hex/murray_hex.svg" type="image/svg+xml"></object>
+                <p>Murray</p>
+            </li>
+            <li class="deputy">
+                <object id="butler" data="hex/butler_hex.svg" type="image/svg+xml"></object>
+                <p>Butler</p>
             </li>
             <li>
                 <object id="none" data="hex/none_hex.svg" type="image/svg+xml"></object>
@@ -57,7 +82,7 @@
                 CLP Count
             </th>
         </tr>
-        <tr>
+        <tr class="leader">
             <td style="background-color: rgba(165,105,189,0.4)">
                 Lisa Nandy
             </td>
@@ -65,7 +90,7 @@
                 0
             </td>
         </tr>
-        <tr>
+        <tr class="leader">
             <td style="background-color: rgba(235, 152, 78, 0.4)">
                 Keir Starmer
             </td>
@@ -73,7 +98,7 @@
                 0
             </td>
         </tr>
-        <tr>
+        <tr class="leader">
             <td style="background-color: rgba(69, 179, 157, 0.4)">
                 Rebecca Long-Bailey
             </td>
@@ -81,7 +106,7 @@
                 0
             </td>
         </tr>
-        <tr>
+        <tr class="leader">
             <td style="background-color: rgba(93, 173, 226, 0.4)">
                 Emily Thornberry
             </td>
@@ -89,11 +114,43 @@
                 0
             </td>
         </tr>
-        <tr>
-            <td style="background-color: rgba(244, 208, 63, 0.4)">
-                Jess Phillips
+        <tr class="deputy">
+            <td style="background-color: rgba(210, 180, 222, 0.4)">
+                Rosena Allin-Khan
             </td>
-            <td class="phillips">
+            <td class="khan">
+                0
+            </td>
+        </tr>
+        <tr class="deputy">
+            <td style="background-color: rgba(169, 204, 227, 0.4)">
+                Angela Rayner
+            </td>
+            <td class="rayner">
+                0
+            </td>
+        </tr>
+        <tr class="deputy">
+            <td style="background-color: rgba(237, 187, 153, 0.4)">
+                Richard Burgon
+            </td>
+            <td class="burgon">
+                0
+            </td>
+        </tr>
+        <tr class="deputy">
+            <td style="background-color: rgba(249, 231, 159, 0.4)">
+                Ian Murray
+            </td>
+            <td class="murray">
+                0
+            </td>
+        </tr>
+        <tr class="deputy">
+            <td style="background-color: rgba(171, 235, 198, 0.4)">
+                Dawn Butler
+            </td>
+            <td class="butler">
                 0
             </td>
         </tr>
