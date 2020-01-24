@@ -54,7 +54,7 @@ body {
 .control {
     outline: 0;
     padding: 5px;
-    width: 47%;
+    width: 48%;
     justify-content: space-between;
     margin-top: 10px;
     float: left;
@@ -97,7 +97,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-family: Arial;
     position: absolute;
-    width: 45%;
+    width: 49%;
     min-width: 200px;
     display: inline-block;
     top: 10px;

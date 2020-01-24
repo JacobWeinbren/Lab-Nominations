@@ -409,6 +409,7 @@ function render(data) {
 
 //Loads Spreadsheet
 $(document).ready(function() {
+    $('.second .deputy').hide();
     $('.deputy object')[0].addEventListener('load', function() {
         $('.deputy').hide();
     });
