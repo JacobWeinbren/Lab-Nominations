@@ -138,9 +138,12 @@ function deputy_run(data) {
 
 function frequency(count) {
 
-
-    for (name in count) {
-        document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
+    try {
+        for (name in count) {
+            document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
+        }
+    } catch (err) {
+        console.log(err)
     }
 
     for (name in count) {
@@ -166,6 +169,21 @@ function render(data) {
         $(this).addClass('active')
 
         deputy_run(data)
+    });
+
+    $(window).on('resize', function() {
+        if (state == 'leader') {
+            leader_run(data)
+        }
+        if (state == 'deputy') {
+            deputy_run(data)
+        }
+
+        if (object) {
+            object.resize();
+            object.fit();
+            object.center();
+        }
     });
 
     //Add in Meta Data
@@ -433,13 +451,4 @@ $(document).ready(function() {
             simpleSheet: true
         });
     });
-});
-
-$(window).on('resize', function() {
-
-    if (object) {
-        object.resize();
-        object.fit();
-        object.center();
-    }
 });
