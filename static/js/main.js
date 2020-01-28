@@ -153,6 +153,8 @@ function frequency(count) {
 
 function render(data) {
 
+    data_var = data;
+
     $('#leader').addClass('active')
 
     $('#leader').click(function(event) {
@@ -161,6 +163,10 @@ function render(data) {
         $(this).addClass('active')
 
         leader_run(data)
+        setTimeout(
+            function() {
+                leader_run(data)
+            }, 1000);
     });
 
     $('#deputy').click(function(event) {
@@ -169,6 +175,10 @@ function render(data) {
         $(this).addClass('active')
 
         deputy_run(data)
+        setTimeout(
+            function() {
+                deputy_run(data)
+            }, 1000);
     });
 
     $(window).on('resize', function() {
