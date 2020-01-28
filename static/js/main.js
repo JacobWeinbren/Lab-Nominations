@@ -24,9 +24,6 @@ colours = {
 
 function leader_run(data) {
 
-    $('.deputy').hide();
-    $('.leader').show();
-
     count = {
         'nandy': 0,
         'bailey': 0,
@@ -77,9 +74,6 @@ function leader_run(data) {
 }
 
 function deputy_run(data) {
-
-    $('.leader').hide();
-    $('.deputy').show();
 
     count = {
         'khan': 0,
@@ -162,11 +156,15 @@ function render(data) {
         $('#deputy').removeClass('active')
         $(this).addClass('active')
 
+        $('.leader').show();
+        $('.deputy').hide();
         leader_run(data)
-        setTimeout(
-            function() {
-                leader_run(data)
-            }, 300);
+        if (window.safari !== undefined) {
+            setTimeout(
+                function() {
+                    leader_run(data)
+                }, 300);
+        }
     });
 
     $('#deputy').click(function(event) {
@@ -174,11 +172,15 @@ function render(data) {
         $('#leader').removeClass('active')
         $(this).addClass('active')
 
+        $('.deputy').show();
+        $('.leader').hide();
         deputy_run(data)
-        setTimeout(
-            function() {
-                deputy_run(data)
-            }, 300);
+        if (window.safari !== undefined) {
+            setTimeout(
+                function() {
+                    deputy_run(data)
+                }, 300);
+        }
     });
 
     $(window).on('resize', function() {
@@ -437,7 +439,9 @@ function render(data) {
 
 //Loads Spreadsheet
 $(document).ready(function() {
-    $('.deputy').hide();
+    $('.leader object')[3].addEventListener('load', function() {
+        $('.deputy').hide();
+    });
 
     $('#map')[0].addEventListener('load', function() {
         svg = document.querySelector('#map').getSVGDocument();
