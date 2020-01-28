@@ -156,14 +156,16 @@ function render(data) {
         $('#deputy').removeClass('active')
         $(this).addClass('active')
 
-        $('.leader').show();
         $('.deputy').hide();
-        leader_run(data)
+        $('.leader').show();
+
         if (window.safari !== undefined) {
             setTimeout(
                 function() {
                     leader_run(data)
                 }, 300);
+        } else {
+            leader_run(data)
         }
     });
 
@@ -172,14 +174,16 @@ function render(data) {
         $('#leader').removeClass('active')
         $(this).addClass('active')
 
-        $('.deputy').show();
         $('.leader').hide();
-        deputy_run(data)
+        $('.deputy').show();
+
         if (window.safari !== undefined) {
             setTimeout(
                 function() {
                     deputy_run(data)
                 }, 300);
+        } else {
+            deputy_run(data)
         }
     });
 
