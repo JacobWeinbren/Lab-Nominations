@@ -427,10 +427,7 @@ function render(data) {
 
 //Loads Spreadsheet
 $(document).ready(function() {
-    $('.second .deputy').hide();
-    $('.deputy object')[0].addEventListener('load', function() {
-        $('.deputy').hide();
-    });
+    $('.deputy').hide();
 
     $('#map')[0].addEventListener('load', function() {
         svg = document.querySelector('#map').getSVGDocument();
