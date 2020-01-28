@@ -166,7 +166,7 @@ function render(data) {
         setTimeout(
             function() {
                 leader_run(data)
-            }, 1000);
+            }, 300);
     });
 
     $('#deputy').click(function(event) {
@@ -178,7 +178,7 @@ function render(data) {
         setTimeout(
             function() {
                 deputy_run(data)
-            }, 1000);
+            }, 300);
     });
 
     $(window).on('resize', function() {
