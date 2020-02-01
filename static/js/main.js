@@ -155,6 +155,7 @@ function render(data) {
         state = 'leader';
         $('#deputy').removeClass('active')
         $(this).addClass('active')
+        $('.constituency', svg).css('fill', 'white');
 
         $('.deputy').hide();
         $('.leader').show();
@@ -173,6 +174,7 @@ function render(data) {
         state = 'deputy';
         $('#leader').removeClass('active')
         $(this).addClass('active')
+        $('.constituency', svg).css('fill', 'white');
 
         $('.leader').hide();
         $('.deputy').show();
