@@ -24,6 +24,11 @@ colours = {
 
 function leader_run(data) {
 
+    $('.item').css('visibility', 'hidden')
+    $('.item').css('position', 'absolute')
+    $('.leader').css('visibility', 'visible')
+    $('.leader').css('position', 'relative')
+
     count = {
         'nandy': 0,
         'bailey': 0,
@@ -74,6 +79,11 @@ function leader_run(data) {
 }
 
 function deputy_run(data) {
+
+    $('.item').css('visibility', 'hidden')
+    $('.item').css('position', 'absolute')
+    $('.deputy').css('visibility', 'visible')
+    $('.deputy').css('position', 'relative')
 
     count = {
         'khan': 0,
@@ -131,13 +141,8 @@ function deputy_run(data) {
 }
 
 function frequency(count) {
-
-    try {
-        for (name in count) {
-            document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
-        }
-    } catch (err) {
-        console.log(err)
+    for (name in count) {
+        document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
     }
 
     for (name in count) {
@@ -157,9 +162,6 @@ function render(data) {
         $(this).addClass('active')
         $('.constituency', svg).css('fill', 'white');
 
-        $('.deputy').hide();
-        $('.leader').show();
-
         if (window.safari !== undefined) {
             setTimeout(
                 function() {
@@ -176,9 +178,6 @@ function render(data) {
         $(this).addClass('active')
         $('.constituency', svg).css('fill', 'white');
 
-        $('.leader').hide();
-        $('.deputy').show();
-
         if (window.safari !== undefined) {
             setTimeout(
                 function() {
@@ -190,7 +189,7 @@ function render(data) {
     });
 
 
-    new ResizeSensor(jQuery('#svg'), function() {
+    $(window).resize(function() {
         if (object) {
             object.resize();
             object.fit();
@@ -322,7 +321,6 @@ function render(data) {
                     }
                 }
 
-
                 //MP Nom
                 mp = $(this).attr('mp');
                 vote = $(this).attr('vote');
@@ -434,14 +432,12 @@ function render(data) {
             $('.constituency', svg).css('fill-opacity', 1);
         }
     });
-
 }
 
 //Loads Spreadsheet
 $(document).ready(function() {
-    $('.leader object')[3].addEventListener('load', function() {
-        $('.deputy').hide();
-    });
+    $('.deputy').css('visibility', 'hidden')
+    $('.deputy').css('position', 'absolute')
 
     $('#map')[0].addEventListener('load', function() {
         svg = document.querySelector('#map').getSVGDocument();

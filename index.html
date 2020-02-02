@@ -4,7 +4,6 @@
     <script src="static/js/jquery.js"></script>
     <script src="static/js/panzoom.js"></script>
     <script src="static/js/tabletop.js"></script>
-    <script src="static/js/resize.js"></script>
     <script src="static/js/main.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
@@ -31,43 +30,47 @@
             </div>
         </div>
         <ul id='key' class="first">
-            <li class="leader">
+            <li class="item leader">
                 <object id="nandy" data="hex/nandy_hex.svg" type="image/svg+xml"></object>
                 <p>Nandy</p>
             </li>
-            <li class="leader">
+            <li class="item leader">
                 <object id="starmer" data="hex/starmer_hex.svg" type="image/svg+xml"></object>
                 <p>Starmer</p>
             </li>
-            <li class="leader">
+            <li class="item leader">
                 <object id="bailey" data="hex/bailey_hex.svg" type="image/svg+xml"></object>
                 <p>Long-Bailey</p>
             </li>
-            <li class="leader">
+            <li class="item leader">
                 <object id="thornberry" data="hex/thornbury_hex.svg" type="image/svg+xml"></object>
                 <p>Thornberry</p>
             </li>
-            <li class="deputy">
+            <li class="item deputy">
                 <object id="khan" data="hex/khan_hex.svg" type="image/svg+xml"></object>
                 <p>Allin-Khan</p>
             </li>
-            <li class="deputy">
+            <li class="item deputy">
                 <object id="rayner" data="hex/rayner_hex.svg" type="image/svg+xml"></object>
                 <p>Rayner</p>
             </li>
-            <li class="deputy">
+            <li class="item deputy">
                 <object id="burgon" data="hex/burgon_hex.svg" type="image/svg+xml"></object>
                 <p>Burgon</p>
             </li>
-            <li class="deputy">
+            <li class="item deputy">
                 <object id="murray" data="hex/murray_hex.svg" type="image/svg+xml"></object>
                 <p>Murray</p>
             </li>
-            <li class="deputy">
+            <li class="item deputy">
                 <object id="butler" data="hex/butler_hex.svg" type="image/svg+xml"></object>
                 <p>Butler</p>
             </li>
-            <li>
+            <li class="item deputy">
+                <object id="none" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>None</p>
+            </li>
+            <li class="item leader">
                 <object id="none" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>None</p>
             </li>
@@ -82,7 +85,7 @@
                 CLP Count
             </th>
         </tr>
-        <tr class="leader">
+        <tr class="item leader">
             <td style="background-color: rgba(165,105,189,0.4)">
                 Lisa Nandy
             </td>
@@ -90,7 +93,7 @@
                 0
             </td>
         </tr>
-        <tr class="leader">
+        <tr class="item leader">
             <td style="background-color: rgba(235, 152, 78, 0.4)">
                 Keir Starmer
             </td>
@@ -98,7 +101,7 @@
                 0
             </td>
         </tr>
-        <tr class="leader">
+        <tr class="item leader">
             <td style="background-color: rgba(69, 179, 157, 0.4)">
                 Rebecca Long-Bailey
             </td>
@@ -106,7 +109,7 @@
                 0
             </td>
         </tr>
-        <tr class="leader">
+        <tr class="item leader">
             <td style="background-color: rgba(93, 173, 226, 0.4)">
                 Emily Thornberry
             </td>
@@ -114,7 +117,7 @@
                 0
             </td>
         </tr>
-        <tr class="deputy">
+        <tr class="item deputy">
             <td style="background-color: rgba(210, 180, 222, 0.4)">
                 Rosena Allin-Khan
             </td>
@@ -122,7 +125,7 @@
                 0
             </td>
         </tr>
-        <tr class="deputy">
+        <tr class="item deputy">
             <td style="background-color: rgba(169, 204, 227, 0.4)">
                 Angela Rayner
             </td>
@@ -130,7 +133,7 @@
                 0
             </td>
         </tr>
-        <tr class="deputy">
+        <tr class="item deputy">
             <td style="background-color: rgba(237, 187, 153, 0.4)">
                 Richard Burgon
             </td>
@@ -138,7 +141,7 @@
                 0
             </td>
         </tr>
-        <tr class="deputy">
+        <tr class="item deputy">
             <td style="background-color: rgba(249, 231, 159, 0.4)">
                 Ian Murray
             </td>
@@ -146,7 +149,7 @@
                 0
             </td>
         </tr>
-        <tr class="deputy">
+        <tr class="item deputy">
             <td style="background-color: rgba(171, 235, 198, 0.4)">
                 Dawn Butler
             </td>
