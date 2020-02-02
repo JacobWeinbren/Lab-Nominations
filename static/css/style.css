@@ -14,7 +14,6 @@ body {
     position: relative;
     height: 100vh;
     max-height: 1350px;
-    max-width: 800px;
     overflow: hidden;
 }
 
