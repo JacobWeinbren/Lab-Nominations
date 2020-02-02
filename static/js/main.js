@@ -189,14 +189,8 @@ function render(data) {
         }
     });
 
-    $(window).on('resize', function() {
-        if (state == 'leader') {
-            leader_run(data)
-        }
-        if (state == 'deputy') {
-            deputy_run(data)
-        }
 
+    new ResizeSensor(jQuery('#svg'), function() {
         if (object) {
             object.resize();
             object.fit();
