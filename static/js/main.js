@@ -142,7 +142,6 @@ function deputy_run(data) {
 
 function frequency(count) {
     for (name in count) {
-        console.log(document.querySelector('#' + name), name, count[name])
         document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
     }
 
