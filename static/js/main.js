@@ -34,7 +34,7 @@ function leader_run(data) {
         'bailey': 0,
         'starmer': 0,
         'thornberry': 0,
-        'none': 0,
+        'none-a': 0,
     }
 
     for (item in data) {
@@ -56,7 +56,7 @@ function leader_run(data) {
             $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', colours['starmer'])
         }
         if (current == 'None') {
-            count['none'] += 1
+            count['none-a'] += 1
             $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', colours['none'])
         }
         if (!leader) {
@@ -91,7 +91,7 @@ function deputy_run(data) {
         'murray': 0,
         'butler': 0,
         'rayner': 0,
-        'none': 0
+        'none-b': 0
     }
 
     for (item in data) {
@@ -117,7 +117,7 @@ function deputy_run(data) {
             $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', colours['murray'])
         }
         if (deputy == 'None') {
-            count['none'] += 1
+            count['none-b'] += 1
             $('path[title="' + data[item]['Constituency Name'] + '"]', svg).css('fill', colours['none'])
         }
         if (!deputy) {
@@ -142,6 +142,7 @@ function deputy_run(data) {
 
 function frequency(count) {
     for (name in count) {
+        console.log(document.querySelector('#' + name), name, count[name])
         document.querySelector('#' + name).getSVGDocument().getElementById("number").innerHTML = count[name];
     }
 
