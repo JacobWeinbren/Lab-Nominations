@@ -4,6 +4,7 @@
     <script src="static/js/jquery.js"></script>
     <script src="static/js/panzoom.js"></script>
     <script src="static/js/tabletop.js"></script>
+    <script src="static/js/colour.js"></script>
     <script src="static/js/main.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
@@ -15,64 +16,137 @@
         <div id='info'>
             <div id='box'>
                 <object id='hex' data="hex.svg" type="image/svg+xml"></object>
-                <p id='title'>Constituency Name</p>
+                <p id='constituency_name'>Constituency Name</p>
             </div>
-            <p class='status'>CLP Didn't Nominate in 2016</p>
-            <p class='status'>CLP Hasn't Nominated Leader Yet</p>
-            <p class='status'>CLP Hasn't Nominated Deputy Yet</p>
-            <p class='status'>MP/MSP Can't Make Nomination</p>
-            <p class='status'>Elected Party in Year</p>
-            <div class='bar'>
-            </div>
+            <p></p>
+            <div class='divider'></div>
+            <p id='election'><b>Party (Year)</b> and was <b>Party (Year)</b></p>
+            <div id='bar'></div>
+            <p></p>
+            <div class='divider'></div>
+            <p id='elected'><b>MP</b> nominated <b>Candidate</b> for Leader and <b>Candidate</b> for Deputy</p>
+            <div class='divider'></div>
+            <p id='leader_info'>For <b>Leader</b>, CLP Nominated <b>Candidate</b> in 2020, <b>Candidate</b> in 2016 and <b>Candidate</b> in 2015</p>
+            <div class='divider'></div>
+            <p id='deputy_info'>For <b>Deputy</b>, CLP Nominated <b>Candidate</b> in 2020 and <b>Candidate</b> in 2016</p>
+            <div class='divider'></div>
             <div id="greater">
                 <button class="control" id="leader">2020 Leader</button>
                 <button class="control" id="deputy">2020 Deputy-Leader</button>
             </div>
+            <div id='greater'>
+                <button class="control" id="old">2015 Leader</button>
+                <button class="control" id='medium'>2016 Leader</button>
+            </div>
+            <div id='greater'>
+                <button class="control" id='election_button'>Election Results</button>
+                <button class="control" id='mp'>MP Leader Nomination</button>
+            </div>
+            <div id='greater'>
+                <button class="control" id='defence'>Labour Defences</button>
+                <button class="control" id='target'>Labour Targets</button>
+            </div>
         </div>
         <ul id='key' class="first">
             <li class="item leader">
-                <object id="nandy" data="hex/nandy_hex.svg" type="image/svg+xml"></object>
+                <object class="leader" name="Lisa Nandy" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Nandy</p>
             </li>
             <li class="item leader">
-                <object id="starmer" data="hex/starmer_hex.svg" type="image/svg+xml"></object>
+                <object class="leader" name="Keir Starmer" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Starmer</p>
             </li>
             <li class="item leader">
-                <object id="bailey" data="hex/bailey_hex.svg" type="image/svg+xml"></object>
+                <object class="leader" name="Rebecca Long-Bailey" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Long-Bailey</p>
             </li>
             <li class="item leader">
-                <object id="thornberry" data="hex/thornbury_hex.svg" type="image/svg+xml"></object>
+                <object class="leader" name="Emily Thornberry" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Thornberry</p>
             </li>
             <li class="item deputy">
-                <object id="khan" data="hex/khan_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="Rosena Allin-Khan" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Allin-Khan</p>
             </li>
             <li class="item deputy">
-                <object id="rayner" data="hex/rayner_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="Angela Rayner" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Rayner</p>
             </li>
             <li class="item deputy">
-                <object id="burgon" data="hex/burgon_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="Richard Burgon" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Burgon</p>
             </li>
             <li class="item deputy">
-                <object id="murray" data="hex/murray_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="Ian Murray" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Murray</p>
             </li>
             <li class="item deputy">
-                <object id="butler" data="hex/butler_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="Dawn Butler" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>Butler</p>
             </li>
             <li class="item deputy">
-                <object id="none-b" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <object class="deputy" name="None" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>None</p>
             </li>
             <li class="item leader">
-                <object id="none-a" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <object class="leader" name="None" data="hex/none_hex.svg" type="image/svg+xml"></object>
                 <p>None</p>
+            </li>
+            <li class="item old">
+                <object class="old" name="Jeremy Corbyn" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Corbyn</p>
+            </li>
+            <li class="item old">
+                <object class="old" name="Andy Burnham" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Burnham</p>
+            </li>
+            <li class="item old">
+                <object class="old" name="Yvette Cooper" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Cooper</p>
+            </li>
+            <li class="item old">
+                <object class="old" name="Liz Kendall" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Kendall</p>
+            </li>
+            <li class="item medium">
+                <object class="medium" name="Jeremy Corbyn" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Corbyn</p>
+            </li>
+            <li class="item medium">
+                <object class="medium" name="Owen Smith" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Smith</p>
+            </li>
+            <li class="item medium">
+                <object class="medium" name="None" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>None</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="Lab" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Labour</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="Con" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Conservative</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="LD" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Lib Dem</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="SNP" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>SNP</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="PC" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Plaid Cymru</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="Green" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Green</p>
+            </li>
+            <li class="item election">
+                <object class="election" name="Spk" data="hex/none_hex.svg" type="image/svg+xml"></object>
+                <p>Speaker</p>
             </li>
         </ul>
     </div>
@@ -86,82 +160,202 @@
             </th>
         </tr>
         <tr class="item leader">
-            <td style="background-color: rgba(165,105,189,0.4)">
+            <td>
                 Lisa Nandy
             </td>
-            <td class="nandy">
+            <td name="Lisa Nandy">
                 0
             </td>
         </tr>
         <tr class="item leader">
-            <td style="background-color: rgba(235, 152, 78, 0.4)">
+            <td>
                 Keir Starmer
             </td>
-            <td class="starmer">
+            <td name="Keir Starmer">
                 0
             </td>
         </tr>
         <tr class="item leader">
-            <td style="background-color: rgba(69, 179, 157, 0.4)">
+            <td>
                 Rebecca Long-Bailey
             </td>
-            <td class="bailey">
+            <td name="Rebecca Long-Bailey">
                 0
             </td>
         </tr>
         <tr class="item leader">
-            <td style="background-color: rgba(93, 173, 226, 0.4)">
+            <td>
                 Emily Thornberry
             </td>
-            <td class="thornberry">
+            <td name="Emily Thornberry">
                 0
             </td>
         </tr>
         <tr class="item deputy">
-            <td style="background-color: rgba(210, 180, 222, 0.4)">
+            <td>
                 Rosena Allin-Khan
             </td>
-            <td class="khan">
+            <td name="Rosena Allin-Khan">
                 0
             </td>
         </tr>
         <tr class="item deputy">
-            <td style="background-color: rgba(169, 204, 227, 0.4)">
+            <td>
                 Angela Rayner
             </td>
-            <td class="rayner">
+            <td name="Angela Rayner">
                 0
             </td>
         </tr>
         <tr class="item deputy">
-            <td style="background-color: rgba(237, 187, 153, 0.4)">
+            <td>
                 Richard Burgon
             </td>
-            <td class="burgon">
+            <td name="Richard Burgon">
                 0
             </td>
         </tr>
         <tr class="item deputy">
-            <td style="background-color: rgba(249, 231, 159, 0.4)">
+            <td>
                 Ian Murray
             </td>
-            <td class="murray">
+            <td name="Ian Murray">
                 0
             </td>
         </tr>
         <tr class="item deputy">
-            <td style="background-color: rgba(171, 235, 198, 0.4)">
+            <td>
                 Dawn Butler
             </td>
-            <td class="butler">
+            <td name="Dawn Butler">
                 0
             </td>
         </tr>
-        <tr>
-            <td style="background-color: rgba(205, 97, 85, 0.4)">
+        <tr class="item deputy">
+            <td>
                 None
             </td>
-            <td class="none">
+            <td name="None">
+                0
+            </td>
+        </tr>
+        <tr class="item leader">
+            <td>
+                None
+            </td>
+            <td name="None">
+                0
+            </td>
+        </tr>
+        <tr class="item old">
+            <td>
+                Corbyn
+            </td>
+            <td name="Jeremy Corbyn">
+                0
+            </td>
+        </tr>
+        <tr class="item old">
+            <td>
+                Burnham
+            </td>
+            <td name="Andy Burnham">
+                0
+            </td>
+        </tr>
+        <tr class="item old">
+            <td>
+                Cooper
+            </td>
+            <td name="Yvette Cooper">
+                0
+            </td>
+        </tr>
+        <tr class="item old">
+            <td>
+                Kendall
+            </td>
+            <td name="Liz Kendall">
+                0
+            </td>
+        </tr>
+        <tr class="item medium">
+            <td>
+                Corbyn
+            </td>
+            <td name="Jeremy Corbyn">
+                0
+            </td>
+        </tr>
+        <tr class="item medium">
+            <td>
+                Smith
+            </td>
+            <td name="Owen Smith">
+                0
+            </td>
+        </tr>
+        <tr class="item medium">
+            <td>
+                None
+            </td>
+            <td name="None">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Conservative
+            </td>
+            <td name="Con">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Labour
+            </td>
+            <td name="Lab">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Lib Dem
+            </td>
+            <td name="LD">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                SNP
+            </td>
+            <td name="SNP">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Plaid Cymru
+            </td>
+            <td name="PC">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Green
+            </td>
+            <td name="Green">
+                0
+            </td>
+        </tr>
+        <tr class="item election">
+            <td>
+                Speaker
+            </td>
+            <td name="Spk">
                 0
             </td>
         </tr>
