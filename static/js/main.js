@@ -328,7 +328,7 @@ function render(data) {
         if (object) {
             object.resize();
             object.fit();
-            if ($(window).width() <= 650) {
+            if ($(window).width() <= 800) {
                 object.center();
             } else {
                 object.pan({ x: 150, y: 0 })
@@ -568,7 +568,7 @@ $(document).ready(function() {
             center: 1
         });
 
-        if ($(window).width() <= 650) {
+        if ($(window).width() <= 800) {
             object.center();
         } else {
             object.pan({ x: 150, y: 0 })
