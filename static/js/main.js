@@ -63,7 +63,6 @@ function run(data, contestants, variable, reference) {
 function frequency(count, misc = '') {
 
     for (name in count) {
-        console.log(misc + '[name="' + name + '"]')
         key_item = document.querySelector(misc + '[name="' + name + '"]').getSVGDocument();
         $('#representing', key_item).css('fill', colours[name])
         $('#number', key_item).text(count[name]);
