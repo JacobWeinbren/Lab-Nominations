@@ -326,7 +326,11 @@ function render(data) {
         if (object) {
             object.resize();
             object.fit();
-            object.pan({ x: 200, y: 0 })
+            if ($(window).width() <= 650) {
+                object.center();
+            } else {
+                object.pan({ x: 200, y: 0 })
+            }
         }
     });
 
@@ -562,7 +566,11 @@ $(document).ready(function() {
             center: 1
         });
 
-        object.pan({ x: 200, y: 0 })
+        if ($(window).width() <= 650) {
+            object.center();
+        } else {
+            object.pan({ x: 200, y: 0 })
+        }
 
         Tabletop.init({
             key: 'https://docs.google.com/spreadsheets/d/1SKzDtlE7qcpZtueCl-CJlWkeUZnMctWrV7ufNnAlIJs/edit?usp=sharing',
