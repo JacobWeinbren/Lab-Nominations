@@ -69,7 +69,7 @@ function frequency(count, misc = '') {
     }
 
     for (name in count) {
-        $('td[name="' + name + '"]').prev().css('background-color', tinycolor(colours[name]).lighten(20).toString())
+        $('td[name="' + name + '"]').prev().css('background-color', tinycolor(colours[name]).lighten(5).toString())
         $('td[name="' + name + '"]').html(count[name]);
     }
 }
