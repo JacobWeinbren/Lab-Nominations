@@ -329,7 +329,7 @@ function render(data) {
             if ($(window).width() <= 650) {
                 object.center();
             } else {
-                object.pan({ x: 200, y: 0 })
+                object.pan({ x: 100, y: 0 })
             }
         }
     });
@@ -569,7 +569,7 @@ $(document).ready(function() {
         if ($(window).width() <= 650) {
             object.center();
         } else {
-            object.pan({ x: 200, y: 0 })
+            object.pan({ x: 100, y: 0 })
         }
 
         Tabletop.init({
