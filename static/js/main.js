@@ -63,6 +63,7 @@ function run(data, contestants, variable, reference) {
 function frequency(count, misc = '') {
 
     for (name in count) {
+        console.log(misc + '[name="' + name + '"]')
         key_item = document.querySelector(misc + '[name="' + name + '"]').getSVGDocument();
         $('#representing', key_item).css('fill', colours[name])
         $('#number', key_item).text(count[name]);
@@ -269,6 +270,7 @@ function render(data) {
                             'Rebecca Long-Bailey': 0,
                             'Keir Starmer': 0,
                             'Emily Thornberry': 0,
+                            'Jess Phillips': 0,
                             'None': 0,
                         },
                         'MP Leader Nomination',
@@ -282,10 +284,11 @@ function render(data) {
                     'Rebecca Long-Bailey': 0,
                     'Keir Starmer': 0,
                     'Emily Thornberry': 0,
+                    'Jess Phillips': 0,
                     'None': 0,
                 },
                 'MP Leader Nomination',
-                '.leader'
+                '.alt'
             )
         }
     });
