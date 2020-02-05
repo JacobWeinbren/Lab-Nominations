@@ -553,8 +553,8 @@ function render(data) {
 
 //Loads Spreadsheet
 $(document).ready(function() {
-    $('.deputy, .old, .medium, .election').css('visibility', 'hidden')
-    $('.deputy, .old, .medium, .election').css('position', 'absolute')
+    $('.deputy, .old, .medium, .election, .alt:not(.leader)').css('visibility', 'hidden')
+    $('.deputy, .old, .medium, .election, .alt:not(.leader)').css('position', 'absolute')
 
     $('#map')[0].addEventListener('load', function() {
         svg = document.querySelector('#map').getSVGDocument();
