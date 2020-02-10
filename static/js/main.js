@@ -516,7 +516,7 @@ function render(data) {
                 second = $(this).attr('clp_deputy_2020')
 
                 if (!second || second == "") {
-                    second = "Didn't Nominate"
+                    second = "Hasn't Nominated Yet"
                 } else {
                     second = "Nominated <b style='background-color:" + colours[second] + "'>" + second + "</b>"
                 }
