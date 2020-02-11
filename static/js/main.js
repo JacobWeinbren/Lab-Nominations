@@ -468,7 +468,7 @@ function render(data) {
                 name = "<b>" + $(this).attr('name')
 
                 if (region == 'Scotland') {
-                    $('#elected').html(name + " MSP</b> is unable to Nominate<br><br>")
+                    $('#elected').html(name + " MSP</b> is unable to Nominate")
                 } else {
                     if ($(this).attr('result_new') != "Lab") {
                         $('#elected').html(name + " MP</b> is unable to Nominate")
