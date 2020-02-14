@@ -485,9 +485,9 @@ function render(data) {
                 }
 
                 //CLP Leader
-                first = $(this).attr('clp_leader_2015')
-                second = $(this).attr('clp_leader_2016')
-                third = $(this).attr('clp_leader_2020')
+                first = $(this).attr('clp_leader_2015').replace('None', 'Nobody')
+                second = $(this).attr('clp_leader_2016').replace('None', 'Nobody')
+                third = $(this).attr('clp_leader_2020').replace('None', 'Nobody')
 
                 if (!third || third == "") {
                     third = "Hasn't Nominated Yet"
@@ -512,8 +512,8 @@ function render(data) {
                 //CLP Deputy
                 first = ''
                 second = ''
-                first = $(this).attr('clp_deputy_2015')
-                second = $(this).attr('clp_deputy_2020')
+                first = $(this).attr('clp_deputy_2015').replace('None', 'Nobody')
+                second = $(this).attr('clp_deputy_2020').replace('None', 'Nobody')
 
                 if (!second || second == "") {
                     second = "Hasn't Nominated Yet"
