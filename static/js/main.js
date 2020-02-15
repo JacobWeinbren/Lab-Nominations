@@ -328,6 +328,7 @@ function render(data) {
         if (object) {
             object.resize();
             object.fit();
+            object.zoom(0.95)
             if ($(window).width() <= 800) {
                 object.center();
             } else {
@@ -466,21 +467,26 @@ function render(data) {
 
                 //MP Nomination
                 name = "<b>" + $(this).attr('name')
+                clp = $(this).attr('title');
 
                 if (region == 'Scotland') {
                     $('#elected').html(name + " MSP</b> is unable to Nominate")
                 } else {
-                    if ($(this).attr('result_new') != "Lab") {
-                        $('#elected').html(name + " MP</b> is unable to Nominate")
+                    if (clp == 'Labour International' || clp == 'Labour Party of Northern Ireland') {
+                        $('#elected').html(name + "Elected Representative</b> is unable to Nomoinate")
                     } else {
-                        mp_leader = $(this).attr('mp_leader').replace('None', 'Nobody')
-                        mp_deputy = $(this).attr('mp_deputy').replace('None', 'Nobody')
-                        new_intake = $(this).attr('new_intake')
-                        extra = ' '
-                        if (new_intake) {
-                            extra = " <b>(" + new_intake + " intake)</b>"
+                        if ($(this).attr('result_new') != "Lab") {
+                            $('#elected').html(name + " MP</b> is unable to Nominate")
+                        } else {
+                            mp_leader = $(this).attr('mp_leader').replace('None', 'Nobody')
+                            mp_deputy = $(this).attr('mp_deputy').replace('None', 'Nobody')
+                            new_intake = $(this).attr('new_intake')
+                            extra = ' '
+                            if (new_intake) {
+                                extra = " <b>(" + new_intake + " intake)</b>"
+                            }
+                            $('#elected').html(name + " MP</b>" + extra + " nominated <b style='background-color:" + colours[mp_leader] + "'>" + mp_leader + "</b> for Leader and <b style='background-color:" + colours[mp_deputy] + "'>" + mp_deputy + "</b> for Deputy")
                         }
-                        $('#elected').html(name + " MP</b>" + extra + " nominated <b style='background-color:" + colours[mp_leader] + "'>" + mp_leader + "</b> for Leader and <b style='background-color:" + colours[mp_deputy] + "'>" + mp_deputy + "</b> for Deputy")
                     }
                 }
 
@@ -567,6 +573,8 @@ $(document).ready(function() {
             fit: 1,
             center: 1
         });
+
+        object.zoom(0.95)
 
         if ($(window).width() <= 800) {
             object.center();
