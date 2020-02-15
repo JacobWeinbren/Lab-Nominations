@@ -93,8 +93,7 @@ function render(data) {
                             'Lisa Nandy': 0,
                             'Rebecca Long-Bailey': 0,
                             'Keir Starmer': 0,
-                            'Emily Thornberry': 0,
-                            'None': 0,
+                            'Emily Thornberry': 0
                         },
                         '2020 Leader Nomination',
                         '.leader'
@@ -106,8 +105,7 @@ function render(data) {
                     'Lisa Nandy': 0,
                     'Rebecca Long-Bailey': 0,
                     'Keir Starmer': 0,
-                    'Emily Thornberry': 0,
-                    'None': 0,
+                    'Emily Thornberry': 0
                 },
                 '2020 Leader Nomination',
                 '.leader'
@@ -130,7 +128,6 @@ function render(data) {
                             'Rosena Allin-Khan': 0,
                             'Ian Murray': 0,
                             'Richard Burgon': 0,
-                            'None': 0,
                         },
                         '2020 Deputy Nomination',
                         '.deputy'
@@ -144,7 +141,6 @@ function render(data) {
                     'Rosena Allin-Khan': 0,
                     'Ian Murray': 0,
                     'Richard Burgon': 0,
-                    'None': 0,
                 },
                 '2020 Deputy Nomination',
                 '.deputy'
@@ -375,8 +371,7 @@ function render(data) {
             'Lisa Nandy': 0,
             'Rebecca Long-Bailey': 0,
             'Keir Starmer': 0,
-            'Emily Thornberry': 0,
-            'None': 0,
+            'Emily Thornberry': 0
         },
         '2020 Leader Nomination',
         '.leader'
