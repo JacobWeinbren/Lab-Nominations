@@ -328,7 +328,7 @@ function render(data) {
         if (object) {
             object.resize();
             object.fit();
-            object.zoom(0.95)
+            object.zoom(0.99)
             if ($(window).width() <= 800) {
                 object.center();
             } else {
@@ -574,7 +574,7 @@ $(document).ready(function() {
             center: 1
         });
 
-        object.zoom(0.95)
+        object.zoom(0.99)
 
         if ($(window).width() <= 800) {
             object.center();
