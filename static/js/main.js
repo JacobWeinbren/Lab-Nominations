@@ -468,7 +468,7 @@ function render(data) {
                     $('#elected').html(name + " MSP</b> is unable to Nominate")
                 } else {
                     if (clp == 'Labour International' || clp == 'Labour Party of Northern Ireland') {
-                        $('#elected').html(name + "Elected Representative</b> is unable to Nomoinate")
+                        $('#elected').html(name + "Elected Representative</b> is unable to Nominate")
                     } else {
                         if ($(this).attr('result_new') != "Lab") {
                             $('#elected').html(name + " MP</b> is unable to Nominate")
